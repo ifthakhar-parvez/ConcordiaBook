@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ConcordiaBook</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to ConcordiaBook</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Find Textbooks Easily</h2>
+            <p>Welcome to the ConcordiaBook platform. Here you can easily find and trade textbooks you need or no longer use.</p>
+            <form action="/textbooks/" method="get" class="course-search-form">
+                <label for="course_code">Enter Course Code</label>
+                <input type="text" id="course_code" name="course_code" placeholder="e.g. COMP346" required>
+                <button type="submit">Search Textbooks</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Register</h3>
+                    <p>Sign up using your Concordia credentials to start trading books.</p>
+                </div>
+                <div class="step">
+                    <h3>2. List Books</h3>
+                    <p>Add the textbooks you have or need for specific courses.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Exchange</h3>
+                    <p>Find and exchange textbooks with other students in your courses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ConcordiaBook - All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

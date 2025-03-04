@@ -1,0 +1,31 @@
+<!-- textbooks/templates/textbooks/textbooks_list.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Textbooks</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Available Textbooks for {{ course_code }}</h1>
+
+        <div class="book-list">
+            {% for book in textbooks %}
+                <div class="book-card">
+                    <h3>{{ book.title }}</h3>
+                    <p><strong>Author:</strong> {{ book.author }}</p>
+                    <p><strong>Edition:</strong> {{ book.edition|default:"N/A" }}</p>
+                    <p><strong>Condition:</strong> {{ book.condition }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="back-btn">
+            <a href="/" class="btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
